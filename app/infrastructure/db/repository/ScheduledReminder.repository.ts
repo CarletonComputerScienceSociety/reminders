@@ -5,6 +5,8 @@ import { ReminderStatus, ScheduledReminder } from "../../../domain";
 export const create = async () => {
   const newScheduledReminder = await prisma.scheduledReminder.create({
     data: {
+      title: "Scheduled Reminder",
+      description: "Scheduled Reminder Description",
       scheduledAt: new Date(),
       status: "pending",
     },
@@ -32,6 +34,8 @@ const ormToDomain = (
   const status = ormScheduledReminder.status as ReminderStatus;
   const scheduledReminder = new ScheduledReminder({
     id: ormScheduledReminder.id.toString(),
+    title: ormScheduledReminder.title,
+    description: ormScheduledReminder.description,
     scheduledAt: ormScheduledReminder.scheduledAt,
     status: status,
   });

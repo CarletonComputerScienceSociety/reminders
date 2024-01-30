@@ -2,23 +2,23 @@
   "name": "core",
   "version": "1.0.0",
   "description": " tbd",
-  "main": "src/config/index.ts",
+  "main": "app/config/index.ts",
   "scripts": {
-    "start": "ts-node src/config/index.ts",
-    "dev": "nodemon src/infrastructure/api/index.ts",
-    "cron": "nodemon src/infrastructure/workers/index.ts",
-    "deploy-discord-commands": "ts-node src/infrastructure/discord/scripts/deploy-commands.ts",
-    "discord-bot": "nodemon src/infrastructure/discord/index.ts",
+    "start": "ts-node app/config/index.ts",
+    "dev": "nodemon app/infrastructure/api/index.ts",
+    "cron": "nodemon app/infrastructure/workers/index.ts",
+    "deploy-discord-commands": "ts-node app/infrastructure/discord/scripts/deploy-commands.ts",
+    "discord-bot": "nodemon app/infrastructure/discord/index.ts",
     "build": "tsc",
-    "lint": "eslint --fix src test",
+    "lint": "eslint --fix app test",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "check": "prettier --check '**/*.{css,scss,html,ts,tsx}'",
     "format": "prettier --write '**/*.{css,scss,html,ts,tsx}'"
   },
   "prisma": {
-    "schema": "src/infrastructure/db/schema.prisma",
-    "seed": "ts-node src/infrastructure/db/seed.ts"
+    "schema": "app/infrastructure/db/schema.prisma",
+    "seed": "ts-node app/infrastructure/db/seed.ts"
   },
   "keywords": [],
   "author": "Carleton Computer Science Society",

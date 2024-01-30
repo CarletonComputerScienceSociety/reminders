@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "ScheduledReminder" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "scheduledAt" DATETIME NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
-);
